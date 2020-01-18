@@ -1,84 +1,94 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <title>Hartografia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body><!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-white">Kryefaqe</a>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 2 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u2/1_simplemap.html" class="w3-bar-item w3-button">A simple Map</a>
+        <a href="/web/u2/2_syncsimplemap.html" class="w3-bar-item w3-button">Synchronous load</a>
+        <a href="/web/u2/3_controls.html" class="w3-bar-item w3-button">Controls</a>
+        <a href="/web/u2/4_eventclick.html" class="w3-bar-item w3-button">Event click</a>
+        <a href="/web/u2/5_displaycoordinates.html" class="w3-bar-item w3-button">Displaying Coordinates</a>
+        <a href="/web/u2/6_rotation.html" class="w3-bar-item w3-button">Tilt view rotations</a>
+        <a href="/web/u2/7_markers.html" class="w3-bar-item w3-button">Markers</a>
+        <a href="/web/u2/8_infowindow.html" class="w3-bar-item w3-button">Info Window</a>
+        <a href="/web/u2/9_polyline.html" class="w3-bar-item w3-button">Creating a Polyline</a>
+        <a href="/web/u2/11_dashedpolyline.html" class="w3-bar-item w3-button">Dashed Polyline</a>
+        <a href="/web/u2/12_drawingpolyline.html" class="w3-bar-item w3-button">Drawing Polyline</a>
+        <a href="/web/u2/13_MultiPolygon.html" class="w3-bar-item w3-button">Creating a Multipolygon</a>
+        <a href="/web/u2/14_EditingPolygon.html" class="w3-bar-item w3-button">Editing a Polygon</a>
+        <a href="/web/u2/15_GroundOverlay.html" class="w3-bar-item w3-button">Ground Overlay</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 3 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u3/15_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (I)</a>
+        <a href="/web/u3/16_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (II)</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 4 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u4/17_Proj4Js.html" class="w3-bar-item w3-button">Pro4Js</a>
+        <a href="/web/u4/18_Proj4JsTransformim.html" class="w3-bar-item w3-button">Pro4Js Transformim</a>
+        <a href="/web/u4/19_StringFormat.html" class="w3-bar-item w3-button">String Format</a>
+      </div>
+    </div>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Dokumentacioni 📚</a>
+  </div>
 
-    <title>My page title</title>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="/web/u2.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 2 📁</a>
+    <a href="/web/u3.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 3 📁</a>
+    <a href="/web/u4.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 4 📁</a>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-padding-large">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-padding-large">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-padding-large">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-padding-large">Dokumentacioni 📚</a>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="style.css">
 
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Web Hartografia</h1>
+</header>
 
-  </head>
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <h5 class="w3-padding-32">Në ditët e sotme hartat online (web maps) ekzistojnë kudo, ato përdoren në navigacion, në kontrollimin e trafikut, për të gjetur lokacionin apo cakun ku dëshirojmë të arrijmë, në shkencë etj..</h5>
+    <h5 class="w3-padding-32">Web mapping është teknikë e shfrytëzimit të hartave që merren nga një sistem informacioni për të dhënat hapësinore dhe gjeografike (GIS). GIS është më shumë se kuptimi i saj i drejtpërdrejtë dhe shihet nga pikëpamja e shërbimit dhe konsumatorit. Hartat në dispozicion në World Wide Web shërbejnë për qëllime të ndryshme në varësi të llojit të përdoruesit që shërbehet.  GIS njihet edhe si hartim në internet.</h5>
+    <h5 class="w3-padding-32">Pra, GIS është procesi i dizajnimit, zbatimit, gjenerimit dhe shpërndarjes së hartave në World Wide Web. Përderisa GIS kryesisht merret me çështjet teknologjike, Web Hartografia studion aspektet teorike: përdorimi i web hartave, vlerësimi dhe optimizimi i teknikave dhe rrjedhave të punës, përdorshmëria e web hartave, aspektet sociale dhe më shumë. Termat GIS dhe Web mapping përdoren në mënyrë sinonime, edhe nëse ato nuk kanë kuptim të njëjtë.
+GIS ka sjellë shumë të dhëna gjeografike, duke përfshirë ato falas të krijuara nga OpenStreetMap dhe grupet e të dhënave të pronësisë. Gama e softuerit të lirë për gjenerimin e hartave gjithashtu është konceptuar dhe zbatuar së bashku me mjetet pronësore si ArcGIS. Si rezultat, pengesa për hyrjen për të shërbyer harta në internet është ulur.
+</h5>
+   <img src="/img/Dark-World-Map-Vector-with-Network-Concept.jpg" alt="Web Hartografia" class="center">
+    
+  </div>
+</div>
 
-  <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
+<div class="footer">
+    <p>Copyright © 2019 nga <a target="_blank" href="http://github.com/dianaosmaniii">Diana Osmani</a>.</p>
+</div>
 
-    <header>
-      <h1>Web Hartografia</h1>
-    </header>
+<script src="/js/menutoogle.js"></script>
 
-    <nav>
-      <ul>
-        <li><a href="#">Kryefaqja</a></li>
-        <li><a href="#">Ushtrimi 2</a></li>
-        <li><a href="#">Ushtrimi 3</a></li>
-        <li><a href="#">Ushtrimi 4</a></li>
-        <li><a href="#">Web Harto</a></li>
-        <li><a href="#">Geoserver</a></li>
-        <li><a href="#">Arkitektura</a></li>
-        <li><a href="#">Dokumentacioni</a></li>
-      </ul>
-
-       <!-- A Search form is another commmon non-linear way to navigate through a website. -->
-
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
-
-    <!-- Here is our page's main content -->
-    <main>
-
-      <!-- It contains an article -->
-      <article>
-        <h2>Article heading</h2>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
-
-        <h3>subsection</h3>
-
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
-
-        <h3>Another subsection</h3>
-
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-      </article>
-
-      <!-- the aside content can also be nested within the main content -->
-      <aside>
-        <h2>Related</h2>
-
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
-        </ul>
-      </aside>
-
-    </main>
-
-    <!-- And here is our main footer that is used across all the pages of our website -->
-
-    <footer>
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    </footer>
-
-  </body>
+</body>
 </html>
