@@ -1,0 +1,42 @@
+<!partial src="./partials/header.html">
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Geoserver (GIS) 🛰</h1>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div>
+      Zgjidhni adresën e geoserverit
+      <select>
+          <option value="aws">ec2-3-19-26-45.us-east-2.compute.amazonaws.com:8080</option>
+          <option value="localhost">localhost:8080</option>
+      </select>
+      <button id="connect">Lidhu</button>
+  </div>
+</div>
+
+<script>
+  var btn = document.querySelector('#connect');
+  var selection = document.querySelector('select');
+  btn.addEventListener('click', function() {
+    switch(selection.value) {
+      case 'aws':
+      openInNewTab('http://ec2-3-19-26-45.us-east-2.compute.amazonaws.com:8080/geoserver');
+        break;
+      case 'localhost':
+        openInNewTab('http://localhost:8080/geoserver');
+        break;
+      default:
+        // do nothing
+    }
+  })
+
+  function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+  }
+</script>
+
+<!partial src="./partials/footer.html">

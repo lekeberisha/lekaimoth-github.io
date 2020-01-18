@@ -1,0 +1,9 @@
+
+1. Te mendohet nje skenr i perdorimit te Web GIS.
+
+2. sigurimi/mbledhj e të dhënave hapësinore për skenarin
+
+3. publikimi i të dhënave në një GIS Server 
+
+4. ndërtimi i një aplikacioni Web GIS 
+

@@ -1,0 +1,76 @@
+<h1 id="webhartografia">Webhartografia</h1>
+<p>Web mapping është teknikë e shfrytëzimit të hartave që merren nga një sistem informacioni për të dhënat hapësinore dhe gjeografike (GIS). GIS është më shumë se kuptimi i saj i drejtpërdrejtë dhe shihet nga pikëpamja e shërbimit dhe konsumatorit. Hartat në dispozicion në World Wide Web shërbejnë për qëllime të ndryshme në varësi të llojit të përdoruesit që shërbehet. GIS njihet edhe si hartim në internet.</p>
+<h1 id="komponentet-teknike">Komponentet teknike</h1>
+<h2 id="git">Git</h2>
+<p>Për projektin tim, unë përdor Git si sisteme të kontrollit të versionit.</p>
+<h3 id="github">Github</h3>
+<p>Projekti përfshin dy git repositories (depot). Depot janë ngarkuar në Github.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Repository / Depot</th>
+<th>Përshkrim</th>
+<th>Dukshmëria</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/dianaosmaniii/dianaosmaniii.github.io">dianaosmaniii.github.io</a></td>
+<td>Webharto</td>
+<td>Publik</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/dianaosmaniii/geoserver">geoserver</a></td>
+<td>Webharto GIS</td>
+<td>Privat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="github-pages">Github Pages</h3>
+<p>Përmbajtja e failave (files) statike është paraqitur përmes Github Pages. Këtu përfshihen Ushtrimet (2, 3 dhe 4) si dhe <a href="https://dianaosmaniii.github.io/heron-web-harto/webharto">Webharto GUI</a> (Heron). Faqja është në dispozicion nën url https://dianaosmaniii.github.io/.</p>
+<h2 id="html-css-javascript">HTML / CSS / JavaScript</h2>
+<p>Ushtrimet 2, 3 dhe 4 përdorin teknologji të zakonshme në internet si HTML, CSS dhe JavaScript.</p>
+<h2 id="heron">Heron</h2>
+<p><a href="http://heron-mc.org/">Heron</a> është një aplikacion i bazuar në web për shfaqjen e hartave. Ajo bazohet në <a href="https://geoext.org/">GeoExt JavaScript Toolkit</a>.</p>
+<p>Shtresat bazore jane marrë nga <a href="http://geoportal.rks-gov.net/">Gjeoportali Shtetëror (RKS)</a>. Shtresa të tjera ngarkohen nga gjeosverri (Geoserver). Ekzistojnë dy konfigurime gjeoserveri që janë plotësisht identike, por dy adresa të ndryshme: Amazon Cloud (Main) dhe localhost (Backup).</p>
+<h2 id="geoserver">Geoserver</h2>
+<p>Unë kam përdorë një sistem i cili është <a href="http://geoserver.org/">geoserver</a> (open source) për të siguruar shërbimet per shakarimin e gjeodatatave. Konfigurimi i shtresave të ndryshme korrespondon me detyrën. Geoserveri është instaluar në Amazon Cloud (AWS) dhe gjithashtu mund të startohet në sistemin lokal (<em>localhost</em>).</p>
+<h2 id="arcmap">ArcMap</h2>
+<p>Për krijimin e shtresave individuale (shapefiles) unë përdori aplikacionin <a href="http://desktop.arcgis.com/en/arcmap/">ArcMap</a>.</p>
+<h2 id="amazone-web-services-cloud">Amazone Web Services (Cloud)</h2>
+<p><a href="https://aws.amazon.com">Amazone Web Services</a> ofron shumë shërbime te ndryshme <em>cloud</em>. Për qëllimet e mia, unë përdori shërbimin <a href="https://aws.amazon.com/ec2/">EC2</a> (sistem Linux). Në të ështe instaluar gjeosverri (Geoserver). Heron (Webharto) përdor kto shërbime për <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a>/<a href="https://en.wikipedia.org/wiki/Web_Map_Tile_Service">WMTS</a>.</p>
+<h1 id="deployment-shpërndarje">Deployment / Shpërndarje</h1>
+<h2 id="dianaosmaniii.github.io">dianaosmaniii.github.io</h2>
+<h3 id="shakarko-depon">Shakarko depon</h3>
+<pre><code>git clone https://github.com/dianaosmaniii/dianaosmaniii.github.io.git</code></pre>
+<h3 id="krijo-fajlat-files-statike">Krijo fajlat (files) statike</h3>
+<pre class="shell"><code># Kujdes: është testetuar vetëm ne sistem Linux
+cd dianaosmaniii.github.io.git/dev
+./make.sh</code></pre>
+<h3 id="ngarko-ndryshimet-ne-github-depon">Ngarko ndryshimet ne Github (depon)</h3>
+<pre class="shell"><code># git add ...
+# git commit ...
+git push</code></pre>
+<h2 id="geoserver-1">geoserver</h2>
+<h3 id="shakarko-depon-1">Shakarko depon</h3>
+<pre><code>git clone https://github.com/dianaosmaniii/geoserver.git</code></pre>
+<h3 id="startoje-gjeoserverin">Startoje gjeoserverin</h3>
+<h4 id="windows-localhost">Windows (localhost)</h4>
+<pre class="batch"><code>cd /geoserver/geoserver-2.15.2/bin
+startup.bat</code></pre>
+<h4 id="linux-aws">Linux (AWS)</h4>
+<pre class="shell"><code>cd /geoserver/geoserver-2.15.2/bin
+./startup.sh</code></pre>
+<h3 id="ndale-gjeoserverin">Ndale gjeoserverin</h3>
+<h4 id="windows-localhost-1">Windows (localhost)</h4>
+<pre class="batch"><code>cd /geoserver/geoserver-2.15.2/bin
+shutdown.bat</code></pre>
+<h4 id="linux-aws-1">Linux (AWS)</h4>
+<pre class="shell"><code>cd /geoserver/geoserver-2.15.2/bin
+./shutdown.sh</code></pre>
+<h3 id="ngarko-ndryshimet-ne-github-depon-1">Ngarko ndryshimet ne Github (depon)</h3>
+<pre class="shell"><code># git add ...
+# git commit ...
+git push</code></pre>
+<h1 id="arkitektura-e-sistemit">Arkitektura e sistemit</h1>
+<p><img src="../doc/architecture.png" alt="Arkitektura e sistemit" /></p>

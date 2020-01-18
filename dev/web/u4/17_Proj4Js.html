@@ -1,0 +1,28 @@
+<!partial src="../../partials/header.html">
+
+	<script  type="text/javascript" src="js/jquery-2.1.0.js"></script> 
+	<script type="text/javascript" src="js/proj4.js"></script> 
+  <script type="text/javascript">
+    $(window).load(function(){
+	   //EPSG:3857 WGS 84 / Pseudo-Mercator -- Spherical Mercator, Google Maps, OpenStreetMap, Bing, ArcGIS, ESRI
+   //vec per transformim jquery
+   //krijojme interface me dy parametria gjatesi dhe gjeresi
+   //EPSG Dataset i te dhenave duke permbajtur shenime mbi projeksione te ndryshme, KosovaREF nuk eshte pjese
+	var burimi = new proj4.Proj('EPSG:4326');    //Koordinitar në sistemin burim duhet të jenë në  WGS84
+	var destinimi = new proj4.Proj('EPSG:3857'); 
+		$("#convert").on("click", function(){
+			var p = new proj4.Point($("#lng").val(), $("#lat").val() );
+			proj4.transform(burimi, destinimi, p);
+			$("#result").text("X : " +p.x + " \nY : " + p.y);
+		});
+});
+</script>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  Gjatësia : <input type="number" id="lng" />
+	Gjerësia : <input type="number" id="lat" />
+	<button id="convert">Transformo</button>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+	<span id="result"></span>
+</div>
+<!partial src="../../partials/footer.html">

@@ -1,0 +1,28 @@
+<!partial src="../../partials/header.html">
+	<script  type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/proj4.js"></script>
+  <script type="text/javascript">
+    $(window).load(function(){
+	var burimi = new proj4.Proj('EPSG:4326');    //Koordinitar në sistemin burim duhet të jenë në  WGS84
+
+		$("#convert").on("click", function(){
+			crs_input = $("#epsg").val();
+			var crs = 'EPSG:' + crs_input.toString();
+			alert(crs);
+			var destinimi = new proj4.Proj(crs);
+			var p = new proj4.Point($("#lng").val(), $("#lat").val() );
+			proj4.transform(burimi, destinimi, p);
+			$("#result").text("X : " +p.x + " \nY : " + p.y);
+		});
+});
+</script>
+<div class="w3-row-padding w3-padding-64 w3-container">
+	Gjatësia : <input type="number" id="lng" />
+	Gjerësia : <input type="number" id="lat" />
+	Sistemi Ref. Kood EPSG : <input type="number" id="epsg" />
+	<button id="convert">Convert</button>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+	<span id="result"></span>
+</div>
+<!partial src="../../partials/footer.html">

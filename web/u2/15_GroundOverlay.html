@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <title>Hartografia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body><!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-white">Kryefaqe</a>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 2 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u2/1_simplemap.html" class="w3-bar-item w3-button">A simple Map</a>
+        <a href="/web/u2/2_syncsimplemap.html" class="w3-bar-item w3-button">Synchronous load</a>
+        <a href="/web/u2/3_controls.html" class="w3-bar-item w3-button">Controls</a>
+        <a href="/web/u2/4_eventclick.html" class="w3-bar-item w3-button">Event click</a>
+        <a href="/web/u2/5_displaycoordinates.html" class="w3-bar-item w3-button">Displaying Coordinates</a>
+        <a href="/web/u2/6_rotation.html" class="w3-bar-item w3-button">Tilt view rotations</a>
+        <a href="/web/u2/7_markers.html" class="w3-bar-item w3-button">Markers</a>
+        <a href="/web/u2/8_infowindow.html" class="w3-bar-item w3-button">Info Window</a>
+        <a href="/web/u2/9_polyline.html" class="w3-bar-item w3-button">Creating a Polyline</a>
+        <a href="/web/u2/11_dashedpolyline.html" class="w3-bar-item w3-button">Dashed Polyline</a>
+        <a href="/web/u2/12_drawingpolyline.html" class="w3-bar-item w3-button">Drawing Polyline</a>
+        <a href="/web/u2/13_MultiPolygon.html" class="w3-bar-item w3-button">Creating a Multipolygon</a>
+        <a href="/web/u2/14_EditingPolygon.html" class="w3-bar-item w3-button">Editing a Polygon</a>
+        <a href="/web/u2/15_GroundOverlay.html" class="w3-bar-item w3-button">Ground Overlay</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 3 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u3/15_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (I)</a>
+        <a href="/web/u3/16_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (II)</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 4 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u4/17_Proj4Js.html" class="w3-bar-item w3-button">Pro4Js</a>
+        <a href="/web/u4/18_Proj4JsTransformim.html" class="w3-bar-item w3-button">Pro4Js Transformim</a>
+        <a href="/web/u4/19_StringFormat.html" class="w3-bar-item w3-button">String Format</a>
+      </div>
+    </div>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Dokumentacioni 📚</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="/web/u2.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 2 📁</a>
+    <a href="/web/u3.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 3 📁</a>
+    <a href="/web/u4.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 4 📁</a>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-padding-large">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-padding-large">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-padding-large">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-padding-large">Dokumentacioni 📚</a>
+  </div>
+</div>
+
+		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0; }
+			#map { height: 100%; }
+		</style>
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Ground overlay</h1>
+</header>
+<div id="map" class="w3-row-padding w3-padding-64 w3-container"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+		<script type="text/javascript">
+		var map = new google.maps.Map(document.getElementById('map'),
+			{
+				center: {lat: 40.74, lng: -74.18},
+				zoom: 13
+			});
+
+			var imageBounds = new google.maps.LatLngBounds(
+				new google.maps.LatLng(40.712216, -74.22655),
+				new google.maps.LatLng(40.773941, -74.12544));
+
+			historicalOverlay = new google.maps.GroundOverlay(
+				'https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+				imageBounds);
+
+			historicalOverlay.setMap(map);
+
+			historicalOverlay.setOpacity(0.7);
+			
+		</script>
+<script src="/js/menutoogle.js"></script>
+
+</body>
+</html>
+

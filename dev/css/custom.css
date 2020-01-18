@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+header.w3-container {
+  padding: 64px 16px 50px 16px;
+}
+
+/* Override w3-red */
+.w3-red {
+  color:#fff!important;
+  background-color:#494747!important
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #494747;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px;
+}
+
+img {
+  max-width: 100%
+}
+
+/* Browser specific (not valid) styles to make preformatted text wrap */		
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
+
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

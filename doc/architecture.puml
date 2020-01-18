@@ -1,0 +1,42 @@
+@startuml
+
+node "AWS Cloud Computing (MAIN)" {
+  [Geoserver MAIN]
+}
+
+node "localhost (BACKUP)" {
+  [Geoserver BACKUP]
+}
+
+node "HTTPD Github Pages" {
+  [Static Content]
+  [Heron Mapping Client]
+}
+
+
+database "Github Repository" {
+  folder "dianaosmaniii.github.io" {
+	  [Github Pages]
+  }
+  frame "geoserver" {
+	  [Geoserver GIS]
+  }
+}
+
+[User Browser] --> [Heron Mapping Client] : http
+[User Browser] --> [Static Content] : http
+[Heron Mapping Client] --> [Geoserver MAIN]
+[Heron Mapping Client] --> [Geoserver BACKUP]
+
+[Developer] --> [Geoserver GIS] : git
+[Developer] --> [Github Pages] : git
+
+[Administrator Browser] --> [Geoserver MAIN] : http
+[Administrator Browser] --> [Geoserver BACKUP] : http
+
+[Geoserver GIS] ...> [Geoserver MAIN] : deployment
+[Geoserver GIS] ...> [Geoserver BACKUP] : deployment
+[Github Pages] ...> [Static Content] : deployment
+[Github Pages] ...> [Heron Mapping Client] : deployment
+
+@enduml

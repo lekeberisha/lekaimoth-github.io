@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+  <title>Hartografia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body><!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-white">Kryefaqe</a>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 2 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u2/1_simplemap.html" class="w3-bar-item w3-button">A simple Map</a>
+        <a href="/web/u2/2_syncsimplemap.html" class="w3-bar-item w3-button">Synchronous load</a>
+        <a href="/web/u2/3_controls.html" class="w3-bar-item w3-button">Controls</a>
+        <a href="/web/u2/4_eventclick.html" class="w3-bar-item w3-button">Event click</a>
+        <a href="/web/u2/5_displaycoordinates.html" class="w3-bar-item w3-button">Displaying Coordinates</a>
+        <a href="/web/u2/6_rotation.html" class="w3-bar-item w3-button">Tilt view rotations</a>
+        <a href="/web/u2/7_markers.html" class="w3-bar-item w3-button">Markers</a>
+        <a href="/web/u2/8_infowindow.html" class="w3-bar-item w3-button">Info Window</a>
+        <a href="/web/u2/9_polyline.html" class="w3-bar-item w3-button">Creating a Polyline</a>
+        <a href="/web/u2/11_dashedpolyline.html" class="w3-bar-item w3-button">Dashed Polyline</a>
+        <a href="/web/u2/12_drawingpolyline.html" class="w3-bar-item w3-button">Drawing Polyline</a>
+        <a href="/web/u2/13_MultiPolygon.html" class="w3-bar-item w3-button">Creating a Multipolygon</a>
+        <a href="/web/u2/14_EditingPolygon.html" class="w3-bar-item w3-button">Editing a Polygon</a>
+        <a href="/web/u2/15_GroundOverlay.html" class="w3-bar-item w3-button">Ground Overlay</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 3 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u3/15_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (I)</a>
+        <a href="/web/u3/16_GeoJSON.html" class="w3-bar-item w3-button">GeoJSON (II)</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small w3-hover-white">
+      <button class="w3-button">Ushtrimi 4 📁</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="/web/u4/17_Proj4Js.html" class="w3-bar-item w3-button">Pro4Js</a>
+        <a href="/web/u4/18_Proj4JsTransformim.html" class="w3-bar-item w3-button">Pro4Js Transformim</a>
+        <a href="/web/u4/19_StringFormat.html" class="w3-bar-item w3-button">String Format</a>
+      </div>
+    </div>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Dokumentacioni 📚</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="/web/u2.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 2 📁</a>
+    <a href="/web/u3.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 3 📁</a>
+    <a href="/web/u4.html" class="w3-bar-item w3-button w3-padding-large">Ushtrimi 4 📁</a>
+    <a href="/heron-web-harto/webharto" class="w3-bar-item w3-button w3-padding-large">Webharto 🌍</a>
+    <a href="/gis.html" class="w3-bar-item w3-button w3-padding-large">Geoserver 🛰</a>
+    <a href="/architecture.html" class="w3-bar-item w3-button w3-padding-large">Arkitektura 🚀</a>
+    <a href="/doc.html" class="w3-bar-item w3-button w3-padding-large">Dokumentacioni 📚</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Dokumentacioni i sistemit 📚</h1>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Shkarko dokumentacionin si PDF</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <h1 id="webhartografia">Webhartografia</h1>
+<p>Web mapping është teknikë e shfrytëzimit të hartave që merren nga një sistem informacioni për të dhënat hapësinore dhe gjeografike (GIS). GIS është më shumë se kuptimi i saj i drejtpërdrejtë dhe shihet nga pikëpamja e shërbimit dhe konsumatorit. Hartat në dispozicion në World Wide Web shërbejnë për qëllime të ndryshme në varësi të llojit të përdoruesit që shërbehet. GIS njihet edhe si hartim në internet.</p>
+<h1 id="komponentet-teknike">Komponentet teknike</h1>
+<h2 id="git">Git</h2>
+<p>Për projektin tim, unë përdor Git si sisteme të kontrollit të versionit.</p>
+<h3 id="github">Github</h3>
+<p>Projekti përfshin dy git repositories (depot). Depot janë ngarkuar në Github.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Repository / Depot</th>
+<th>Përshkrim</th>
+<th>Dukshmëria</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/dianaosmaniii/dianaosmaniii.github.io">dianaosmaniii.github.io</a></td>
+<td>Webharto</td>
+<td>Publik</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/dianaosmaniii/geoserver">geoserver</a></td>
+<td>Webharto GIS</td>
+<td>Privat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="github-pages">Github Pages</h3>
+<p>Përmbajtja e failave (files) statike është paraqitur përmes Github Pages. Këtu përfshihen Ushtrimet (2, 3 dhe 4) si dhe <a href="https://dianaosmaniii.github.io/heron-web-harto/webharto">Webharto GUI</a> (Heron). Faqja është në dispozicion nën url https://dianaosmaniii.github.io/.</p>
+<h2 id="html-css-javascript">HTML / CSS / JavaScript</h2>
+<p>Ushtrimet 2, 3 dhe 4 përdorin teknologji të zakonshme në internet si HTML, CSS dhe JavaScript.</p>
+<h2 id="heron">Heron</h2>
+<p><a href="http://heron-mc.org/">Heron</a> është një aplikacion i bazuar në web për shfaqjen e hartave. Ajo bazohet në <a href="https://geoext.org/">GeoExt JavaScript Toolkit</a>.</p>
+<p>Shtresat bazore jane marrë nga <a href="http://geoportal.rks-gov.net/">Gjeoportali Shtetëror (RKS)</a>. Shtresa të tjera ngarkohen nga gjeosverri (Geoserver). Ekzistojnë dy konfigurime gjeoserveri që janë plotësisht identike, por dy adresa të ndryshme: Amazon Cloud (Main) dhe localhost (Backup).</p>
+<h2 id="geoserver">Geoserver</h2>
+<p>Unë kam përdorë një sistem i cili është <a href="http://geoserver.org/">geoserver</a> (open source) për të siguruar shërbimet per shakarimin e gjeodatatave. Konfigurimi i shtresave të ndryshme korrespondon me detyrën. Geoserveri është instaluar në Amazon Cloud (AWS) dhe gjithashtu mund të startohet në sistemin lokal (<em>localhost</em>).</p>
+<h2 id="arcmap">ArcMap</h2>
+<p>Për krijimin e shtresave individuale (shapefiles) unë përdori aplikacionin <a href="http://desktop.arcgis.com/en/arcmap/">ArcMap</a>.</p>
+<h2 id="amazone-web-services-cloud">Amazone Web Services (Cloud)</h2>
+<p><a href="https://aws.amazon.com">Amazone Web Services</a> ofron shumë shërbime te ndryshme <em>cloud</em>. Për qëllimet e mia, unë përdori shërbimin <a href="https://aws.amazon.com/ec2/">EC2</a> (sistem Linux). Në të ështe instaluar gjeosverri (Geoserver). Heron (Webharto) përdor kto shërbime për <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a>/<a href="https://en.wikipedia.org/wiki/Web_Map_Tile_Service">WMTS</a>.</p>
+<h1 id="deployment-shpërndarje">Deployment / Shpërndarje</h1>
+<h2 id="dianaosmaniii.github.io">dianaosmaniii.github.io</h2>
+<h3 id="shakarko-depon">Shakarko depon</h3>
+<pre><code>git clone https://github.com/dianaosmaniii/dianaosmaniii.github.io.git</code></pre>
+<h3 id="krijo-fajlat-files-statike">Krijo fajlat (files) statike</h3>
+<pre class="shell"><code># Kujdes: është testetuar vetëm ne sistem Linux
+cd dianaosmaniii.github.io.git/dev
+./make.sh</code></pre>
+<h3 id="ngarko-ndryshimet-ne-github-depon">Ngarko ndryshimet ne Github (depon)</h3>
+<pre class="shell"><code># git add ...
+# git commit ...
+git push</code></pre>
+<h2 id="geoserver-1">geoserver</h2>
+<h3 id="shakarko-depon-1">Shakarko depon</h3>
+<pre><code>git clone https://github.com/dianaosmaniii/geoserver.git</code></pre>
+<h3 id="startoje-gjeoserverin">Startoje gjeoserverin</h3>
+<h4 id="windows-localhost">Windows (localhost)</h4>
+<pre class="batch"><code>cd /geoserver/geoserver-2.15.2/bin
+startup.bat</code></pre>
+<h4 id="linux-aws">Linux (AWS)</h4>
+<pre class="shell"><code>cd /geoserver/geoserver-2.15.2/bin
+./startup.sh</code></pre>
+<h3 id="ndale-gjeoserverin">Ndale gjeoserverin</h3>
+<h4 id="windows-localhost-1">Windows (localhost)</h4>
+<pre class="batch"><code>cd /geoserver/geoserver-2.15.2/bin
+shutdown.bat</code></pre>
+<h4 id="linux-aws-1">Linux (AWS)</h4>
+<pre class="shell"><code>cd /geoserver/geoserver-2.15.2/bin
+./shutdown.sh</code></pre>
+<h3 id="ngarko-ndryshimet-ne-github-depon-1">Ngarko ndryshimet ne Github (depon)</h3>
+<pre class="shell"><code># git add ...
+# git commit ...
+git push</code></pre>
+<h1 id="arkitektura-e-sistemit">Arkitektura e sistemit</h1>
+<p><img src="../doc/architecture.png" alt="Arkitektura e sistemit" /></p>
+  <div class="w3-content"></div>
+</div>
+
+<script>
+document.querySelectorAll('header button')[0]
+  .addEventListener('click', function() {
+    webhartoPdf = 'https://github.com/dianaosmaniii/dianaosmaniii.github.io/raw/master/dev/doc/Webharo.pdf';
+    window.open(webhartoPdf,'_blank');
+  });
+</script>
+
+<script src="/js/menutoogle.js"></script>
+
+</body>
+</html>

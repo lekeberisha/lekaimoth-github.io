@@ -1,0 +1,37 @@
+<!partial src="../../partials/header.html">
+		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0; }
+			#map { height: 100%; }
+		</style>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Creating a Multipolygon</h1>
+</header>
+<div id="map" class="w3-row-padding w3-padding-64 w3-container"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+		<script type="text/javascript">
+			var map = new google.maps.Map(document.getElementById('map'),
+			{
+				center: {lat: 47.5, lng: 16.5},
+				zoom: 9
+			});
+			var path1 = // first polygon in CCW order
+			[
+					{lat: 47, lng: 16 },		{lat: 47, lng: 17 },
+					{lat: 48, lng: 17 },		{lat: 48, lng: 16 }
+			];
+			var path2 = // second polygon in CW order
+			[
+				{lat: 47.8, lng: 16.2 },		{lat: 47.8, lng: 16.8 },
+				{lat: 47.2, lng: 16.8 },		{lat: 47.2, lng: 16.2 }
+			];
+
+			var polygon = new google.maps.Polygon(
+			{
+				paths: [ path1, path2 ],
+				strokeColor: '#408000',		strokeOpacity: 1.0,	strokeWeight: 2,
+				fillColor: '#80FF00',	fillOpacity: 0.4
+			});
+		</script>
+<!partial src="../../partials/footer.html">

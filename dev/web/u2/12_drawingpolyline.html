@@ -1,0 +1,38 @@
+<!partial src="../../partials/header.html">
+		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0; }
+			#map { height: 100%; }
+		</style>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Drawing polyline</h1>
+</header>
+<div id="map" class="w3-row-padding w3-padding-64 w3-container"></div>
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+		<script type="text/javascript">		
+		var map = new google.maps.Map(document.getElementById('map'),
+			{
+				center: {lat: 47.5, lng: 16.5},
+				zoom: 10,
+			});
+			var poly = new google.maps.Polyline(
+			{
+				strokeColor: '#004060',
+				strokeWeight: 3
+			});
+			poly.setMap(map);
+			map.addListener('click', addLatLng);
+			function addLatLng(event)
+			{
+				var path = poly.getPath(); // query path
+				path.push(event.latLng); // append new position
+				var marker = new google.maps.Marker( // add new marker
+				{
+					position: event.latLng,
+					map: map
+				});
+			};
+		</script>
+<!partial src="../../partials/footer.html">

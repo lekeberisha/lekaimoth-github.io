@@ -1,0 +1,62 @@
+<!partial src="../../partials/header.html">
+
+<script>
+			var image = 'images/beachflag.png';  //kontent html brenda infowindow
+			var marker = new google.maps.Marker(
+			{
+				map: map,
+				draggable: true,
+				animation: google.maps.Animation.DROP,
+				position: {lat: 59.327, lng: 18.067},
+				icon: image
+			});
+
+			marker.addListener('click', toggleBounce);
+			
+			function toggleBounce() 
+			{
+				if(marker.getAnimation() !== null) marker.setAnimation(null);
+			  	else marker.setAnimation(google.maps.Animation.BOUNCE);
+			}
+</script>
+
+<style type="text/css">
+	html, body { height: 100%; margin: 0; padding: 0; }
+	#map { height: 100%; }
+</style>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Markers</h1>
+</header>
+<div id="map" class="w3-row-padding w3-padding-64 w3-container"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+<script type="text/javascript">
+	var map = new google.maps.Map(document.getElementById('map'),
+	{
+		center: {lat: 42.648378, lng: 21.166840},
+		zoom: 18
+	});
+			
+			var image = 'img/placeholder_32.png'; 
+			var marker = new google.maps.Marker(
+			{
+				map: map,
+				draggable: true,
+				animation: google.maps.Animation.DROP,
+				position: {lat: 42.648378, lng: 21.166840},
+				icon: image
+			});
+
+			marker.addListener('click', toggleBounce);
+
+			
+			function toggleBounce() 
+			{
+				if(marker.getAnimation() !== null) marker.setAnimation(null);
+			  	else marker.setAnimation(google.maps.Animation.BOUNCE);
+			}
+		</script>
+
+<!partial src="../../partials/footer.html">

@@ -1,0 +1,24 @@
+<!partial src="./partials/header.html">
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center">
+  <h1 class="w3-margin w3-jumbo">Dokumentacioni i sistemit 📚</h1>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Shkarko dokumentacionin si PDF</button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <!partial src="./partials/doc.html">
+  <div class="w3-content"></div>
+</div>
+
+<script>
+document.querySelectorAll('header button')[0]
+  .addEventListener('click', function() {
+    webhartoPdf = 'https://github.com/dianaosmaniii/dianaosmaniii.github.io/raw/master/dev/doc/Webharo.pdf';
+    window.open(webhartoPdf,'_blank');
+  });
+</script>
+
+<!partial src="./partials/footer.html">
