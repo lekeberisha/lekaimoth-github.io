@@ -14,7 +14,7 @@ header.w3-container {
 /* Override w3-red */
 .w3-red {
   color:#fff!important;
-  background-color:#494747!important
+  background-color:#18AF73!important
 }
 
 .footer {
@@ -22,7 +22,7 @@ header.w3-container {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #494747;
+  background-color: #18AF73;
   color: white;
   text-align: center;
 }
