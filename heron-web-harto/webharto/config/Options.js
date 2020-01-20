@@ -70,7 +70,7 @@ Heron.scratch.urls = {
 //GISWS Hapesirat punuese ne GIS Server
 Heron.GISWS.urls = {
     GEOSERVER: Heron.scratch.urls.GEO + '/geoserver/wms?',
-    GEOSERVER_LOCAL: Heron.scratch.urls.GEOBACKUP + '/geoserver/Webharto/wms?',
+    GEOSERVER_LOCAL: Heron.scratch.urls.GEOBACKUP + '/geoserver/wms?',
     AKKWMTS: Heron.scratch.urls.AKK + '/wmts?',
     AKKWMS: Heron.scratch.urls.AKK + '/wms?'
 };
