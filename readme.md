@@ -1,6 +1,6 @@
 ---
 title: "Webhartografia"
-author: Lekë Berishs
+author: Lekë Berisha
 date: 20.01.2020
 geometry: margin=1.8cm
 output: pdf_document
@@ -95,7 +95,3 @@ shutdown.bat
 # git commit ...
 git push
 ```
-
-Arkitektura e sistemit
-======================
-![Arkitektura e sistemit](../doc/architecture.png)
