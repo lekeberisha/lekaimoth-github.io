@@ -546,6 +546,24 @@ Heron.options.map.layers = [
             }
         }
     ),
+	new OpenLayers.Layer.WMS(
+        "local-webharto-rruget",
+        Heron.GISWS.urls.GEOSERVER_LOCAL,
+        {layers: "webharto:rruget", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    featurePrefix: 'test',
+                    featureNS: 'http://ushtrime.com',
+                    downloadFormats: Heron.options.wfs.downloadFormats,
+                    maxQueryArea: 100000,
+                    maxQueryLength: 1000
+                }
+            }
+        }
+    ),
 
 	new OpenLayers.Layer.WMS(
         "local-webharto-industri",
