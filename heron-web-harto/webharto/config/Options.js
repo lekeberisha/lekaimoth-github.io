@@ -3,7 +3,7 @@
 Ext.namespace("Heron.options");
 Ext.namespace("Heron.scratch");
 OpenLayers.Util.onImageLoadErrorColor = "transparent";
-OpenLayers.ProxyHost = "";
+OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
 OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
 
 Ext.BLANK_IMAGE_URL = '/heron-web-harto/lib/ext-3.4.1/resources/images/default/s.gif';
