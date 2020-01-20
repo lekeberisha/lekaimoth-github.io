@@ -1,7 +1,7 @@
 ---
 title: "Webhartografia"
-author: Diana Osmani
-date: 29.08.2019
+author: Lekë Berisha
+date: 20.01.2020
 geometry: margin=1.8cm
 output: pdf_document
 ---
@@ -17,15 +17,14 @@ Komponentet teknike
 Për projektin tim, unë përdor Git si sisteme të kontrollit të versionit.
 
 ### Github
-Projekti përfshin dy git repositories (depot). Depot janë ngarkuar në Github.
+Projekti është ngarkuar në Github.
 
 | Repository / Depot                                                                  | Përshkrim    | Dukshmëria |
 | ----------------------------------------------------------------------------------- | ------------ | ---------- |
-| [dianaosmaniii.github.io](https://github.com/dianaosmaniii/dianaosmaniii.github.io) | Webharto     | Publik     |
-| [geoserver](https://github.com/dianaosmaniii/geoserver)                             | Webharto GIS | Privat     |
+| [lekeberisha.github.io](https://github.com/lekeberisha/lekeberishs.github.io) | Webharto     | Publik        
 
 ### Github Pages
-Përmbajtja e failave (files) statike është paraqitur përmes Github Pages. Këtu përfshihen Ushtrimet (2, 3 dhe 4) si dhe [Webharto GUI](https://dianaosmaniii.github.io/heron-web-harto/webharto) (Heron). Faqja është në dispozicion nën url https://dianaosmaniii.github.io/.
+Përmbajtja e failave (files) statike është paraqitur përmes Github Pages. Këtu përfshihen Ushtrimet (2, 3 dhe 4) si dhe [Webharto GUI](https://lekeberisha.github.io/heron-web-harto/webharto) (Heron). Faqja është në dispozicion nën url https://lekeberisha.github.io/.
 
 ## HTML / CSS / JavaScript
 Ushtrimet 2, 3 dhe 4 përdorin teknologji të zakonshme në internet si HTML, CSS dhe JavaScript.
@@ -33,32 +32,29 @@ Ushtrimet 2, 3 dhe 4 përdorin teknologji të zakonshme në internet si HTML, CS
 ## Heron
 [Heron](http://heron-mc.org/) është një aplikacion i bazuar në web për shfaqjen e hartave. Ajo bazohet në [GeoExt JavaScript Toolkit](https://geoext.org/).
 
-Shtresat bazore jane marrë nga [Gjeoportali Shtetëror (RKS)](http://geoportal.rks-gov.net/). Shtresa të tjera ngarkohen nga gjeosverri (Geoserver). Ekzistojnë dy konfigurime gjeoserveri që janë plotësisht identike, por dy adresa të ndryshme: Amazon Cloud (Main) dhe localhost (Backup).
+Shtresat bazore jane marrë nga [Gjeoportali Shtetëror (RKS)](http://geoportal.rks-gov.net/). Shtresa të tjera ngarkohen nga gjeosverri (Geoserver). Konfigurimi i gjeoserverit është locsl.
 
 
 ## Geoserver
-Unë kam përdorë një sistem i cili është [geoserver](http://geoserver.org/) (open source) për të siguruar shërbimet per shakarimin e gjeodatatave. Konfigurimi i shtresave të ndryshme korrespondon me detyrën. Geoserveri është instaluar në Amazon Cloud (AWS) dhe gjithashtu mund të startohet në sistemin lokal (_localhost_).
+Unë kam përdorë një sistem i cili është [geoserver](http://geoserver.org/) (open source) për të siguruar shërbimet per shakarimin e gjeodatatave. Konfigurimi i shtresave të ndryshme korrespondon me detyrën. Geoserveri është instaluar në localhost dhe  startohet në sistemin lokal (_localhost_).
 
 ## ArcMap
 Për krijimin e shtresave individuale (shapefiles) unë përdori aplikacionin [ArcMap](http://desktop.arcgis.com/en/arcmap/).
 
-## Amazone Web Services (Cloud)
-[Amazone Web Services](https://aws.amazon.com) ofron shumë shërbime te ndryshme _cloud_. Për qëllimet e mia, unë përdori shërbimin [EC2](https://aws.amazon.com/ec2/) (sistem Linux). Në të ështe instaluar gjeosverri (Geoserver). Heron (Webharto) përdor kto shërbime për [WMS](https://en.wikipedia.org/wiki/Web_Map_Service)/[WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service).
-
 Deployment / Shpërndarje
 ========================
 
-## dianaosmaniii.github.io
+## lekeberisha.github.io
 
 ### Shakarko depon
 ```
-git clone https://github.com/dianaosmaniii/dianaosmaniii.github.io.git
+git clone https://github.com/lekeberisha/lekeberisha.github.io.git
 ```
 
 ### Krijo fajlat (files) statike
 ```shell
 # Kujdes: është testetuar vetëm ne sistem Linux
-cd dianaosmaniii.github.io.git/dev
+cd lekeberisha.github.io.git/dev
 ./make.sh
 ```
 
@@ -73,7 +69,7 @@ git push
 
 ### Shakarko depon
 ```
-git clone https://github.com/dianaosmaniii/geoserver.git
+git clone https://github.com/lekeberishs/geoserver.git
 ```
 
 ### Startoje gjeoserverin
@@ -84,12 +80,6 @@ cd /geoserver/geoserver-2.15.2/bin
 startup.bat
 ```
 
-#### Linux (AWS)
-```shell
-cd /geoserver/geoserver-2.15.2/bin
-./startup.sh
-```
-
 ### Ndale gjeoserverin
 
 #### Windows (localhost)
@@ -98,11 +88,6 @@ cd /geoserver/geoserver-2.15.2/bin
 shutdown.bat
 ```
 
-#### Linux (AWS)
-```shell
-cd /geoserver/geoserver-2.15.2/bin
-./shutdown.sh
-```
 
 ### Ngarko ndryshimet ne Github (depon)
 ```shell
@@ -110,7 +95,3 @@ cd /geoserver/geoserver-2.15.2/bin
 # git commit ...
 git push
 ```
-
-Arkitektura e sistemit
-======================
-![Arkitektura e sistemit](../doc/architecture.png)
